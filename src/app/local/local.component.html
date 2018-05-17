@@ -1,0 +1,8 @@
+<div class="local">
+  <div class="marcador">
+    <img src="../../assets/liverpool.png" alt="Liverpool">
+    <p>Liverpool F.C.</p>
+    <p class="goles">{{ goles }}</p>    
+  </div>
+  <app-jugadores-local [jugadores]="jugadores" (gol)="recibeGoles($event)" (amarilla)="recibeAmarillas($event)" (roja)="recibeRojas($event)"></app-jugadores-local>
+</div>

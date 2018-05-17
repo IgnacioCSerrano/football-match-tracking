@@ -1,0 +1,8 @@
+<div class="visitante">
+  <div class="marcador">
+    <p class="goles">{{ goles }}</p>    
+    <p>Manchester United F.C.</p>
+    <img src="../../assets/manchester.png" alt="Manchester United">
+  </div>
+  <app-jugadores-visitante [jugadores]="jugadores" (gol)="recibeGoles($event)" (amarilla)="recibeAmarillas($event)" (roja)="recibeRojas($event)"></app-jugadores-visitante>
+</div>

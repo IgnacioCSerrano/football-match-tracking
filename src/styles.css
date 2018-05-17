@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,400i,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+@import url('https://fonts.googleapis.com/css?family=Cutive+Mono');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cabin', sans-serif;
+    color: #3f3f3f;
+}
+
+.fondo {
+    width: 100%;
+    height: 100vh;
+    background: url('./assets/soccer.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.local {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.visitante {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+}
+
+.marcador {
+    padding: 20px 40px;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.marcador img {
+    max-height: 100%;
+}
+
+.marcador p {
+    margin: 10px;
+    font-size: 35px;
+    text-align: center;
+    color: white;
+}
+
+.marcador .goles {
+    margin: 30px;
+    font-size: 75px;
+    font-weight: bold;
+    font-family: 'Cutive Mono', monospace;
+}
+
+#logo {
+    width: 120px;
+    position: absolute;
+    top: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.tachado {
+    text-decoration: line-through;
+}
+
+.jugadores {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #f4fef4;
+    border-top: 3px solid rgb(56, 0, 60);
+    border-bottom: 3px solid rgb(56, 0, 60);
+}
+
+.jugadores table {
+    width: 100%;
+}
+
+.jugadores table td {
+    padding: 5px 0px;
+    font-size: 20px;
+}
+
+.jugadores table td img {
+    width: 25px;
+}
+
+.jugadores table td:nth-child(2), .jugadores table td:nth-child(4), .jugadores table td:nth-child(6) {
+    padding: 0;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.jugadores table td:nth-child(3), .jugadores table td:nth-child(5) {
+    padding-right: 25px;
+}
+
+.jugadores table td:nth-child(7) {
+    padding-right: 0;
+}
+
+.jugadores table td button {
+    font-size: 0;
+    border: none;
+    outline: none;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.estadisticas {
+    margin-top: 0;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f8f8;
+}
+
+.estadisticas table {
+    padding: 0;
+    width: 100%;
+}
+
+.estadisticas table th {
+    padding: 15px;
+    font-size: 15px;
+    vertical-align: middle;
+}
+
+.estadisticas table td {
+    padding: 15px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.estadisticas table td:nth-child(3) {
+    text-align: left;
+}
+
+.estadisticas table td:nth-child(7) {
+    font-size: 14px;
+}
+
+.estadisticas h1 {
+    padding: 30px 30px 15px 15px;
+}
+
+.rojo {
+    font-weight: bold;
+    color: red;
+}

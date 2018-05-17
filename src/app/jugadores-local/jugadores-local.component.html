@@ -1,0 +1,52 @@
+<div class="jugadores" style="border-right:3px solid rgb(56, 0, 60)">
+  <table>
+    <tr *ngFor="let jugador of jugadores">
+      <td [ngClass]="{tachado: jugador.rojas===1}">{{jugador.nombre}}</td>
+      <td>{{jugador.goles}}</td>
+      <td>
+          <button id="btnGol" (click)="masGoles(this.jugador.nombre, 1); detectar(1);" *ngIf="jugador.rojas<1; else desactivado1"><img src="../../assets/ball.png" alt="Gol"></button>
+      </td>
+      <ng-template #desactivado1> 
+        <button disabled><img src="../../assets/ball.png" alt="Gol"></button>
+      </ng-template>
+      <td>{{jugador.amarillas}}</td>
+      <td>
+          <button id="btnAm" (click)="masAmarillas(this.jugador.nombre, 1); detectTarjeta(1);" *ngIf="jugador.rojas<1; else desactivado2"><img src="../../assets/amarilla.png" alt="Amarilla"></button>
+      </td>
+      <ng-template #desactivado2> 
+        <button disabled><img src="../../assets/amarilla.png" alt="Amarilla"></button>
+      </ng-template>
+      <td>{{jugador.rojas}}</td>
+      <td>
+          <button id="btnRoj" (click)="masRojas(this.jugador.nombre, 1); detectTarjeta(1)" *ngIf="jugador.rojas<1; else desactivado3"><img src="../../assets/roja.png" alt="Roja"></button>
+      </td>
+      <ng-template #desactivado3> 
+        <button disabled><img src="../../assets/roja.png" alt="Roja"></button>
+      </ng-template>
+    </tr>
+  </table>
+</div>
+<div class="estadisticas" style="border-right:3px solid rgb(56, 0, 60)">
+  <h1>Equipo Local</h1>
+  <table>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th>Goles</th>
+      <th>Tarjetas Amarillas</th>
+      <th>Tarjetas Rojas</th>
+      <th>Incidencias</th>
+    </tr>
+    <tr *ngFor="let jugador of alineacion">
+      <td>{{jugador.dorsal}}</td>
+      <td><img [src]="jugador.imagen" width="50px"></td>
+      <td>{{jugador.nombre}}</td>
+      <td>{{jugador.goles}}</td>
+      <td>{{jugador.amarillas}}</td>
+      <td>{{jugador.rojas}}</td>
+      <td class="rojo">{{jugador.incidencias}}</td>
+    </tr>
+  </table>
+</div>
+  
